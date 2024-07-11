@@ -5,6 +5,32 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+
+</script>
+
+<script>
+import router from "../router/index.js";
+
+export default {
+  data(){
+    return {}
+  },
+  methods:{
+    gotoRule(rule){
+      let pathRule = 'chess_rule';
+      if(rule!==1){
+        pathRule = '';
+      }
+      router.push({path:pathRule});
+    },
+    finger(){
+      document.body.style.cursor = 'pointer';
+    },
+    documentPointer(){
+      document.body.style.cursor = 'auto';
+    }
+  }
+}
 </script>
 
 <template>
@@ -12,11 +38,10 @@ import SupportIcon from './icons/IconSupport.vue'
     <template #icon>
       <DocumentationIcon />
     </template>
-    <template #heading>Documentation</template>
-
-    Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
+    <template #heading>规则介绍</template>
+    熟悉
+    <router-view><a @click = gotoRule(1) target="_blank" @mouseover = finger() @mouseout = documentPointer()>规则介绍</a></router-view>
+    将给你的游戏体验带来更大的乐趣
   </WelcomeItem>
 
   <WelcomeItem>

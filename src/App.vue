@@ -1,14 +1,13 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloChess from './components/HelloChess.vue'
 import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
+    <img alt="Chess logo" class="logo" src="./assets/ChessLogo.png" width="100" height="100" />
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloChess msg="欢迎来到中国象棋" />
     </div>
   </header>
 

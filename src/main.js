@@ -1,5 +1,4 @@
 import './assets/main.css'
-
 import { createApp } from 'vue'
 import App from './App.vue'
 import ElementPlus from 'element-plus'
@@ -7,12 +6,10 @@ import { ElMessage } from 'element-plus'
 import 'element-plus/theme-chalk/index.css'
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
-import { get, post } from './network/service'
-import router from './router'
-import store from './store'
-
+import { get, post } from './network/service.js'
+import router from './router/index.js'
+import store from './store/index.js'
 import axios from 'axios'
-axios.defaults.baseURL = 'http://localhost:8081/api';
 import process from "process";
 
 const app = createApp(App)
